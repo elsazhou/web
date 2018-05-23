@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"> 
+<title>form</title> 
+</head>
+<body>
+
+<form action="">
+First name: <input type="text" name="firstname"><br>
+Last name:  <input type="text" name="lastname">
+</form>
+
+<p><b>注意：</b> 表单本身是不可见的。并且注意一个文本字段的默认宽度是20个字符。</p>
+
+<form action="">
+Username: <input type="text" name="user"><br>
+Password:  <input type="password" name="password">
+</form>
+
+<p><b>注意：</b> 密码字段中的字符是隐藏的(显示为星号或圆圈)。</p>
+
+<!-- 当用户单击确认按钮时，表单的内容会被传送到另一个文件。表单的动作属性定义了目的文件的文件名。由动作属性定义的这个文件通常会对接收到的输入数据进行相关的处理。 -->
+
+<form name="input" action="html_form_action.php" method="get">
+Username: <input type="text" name="user">
+<input type="submit" value="Submit">
+</form>
+
+<form>
+<input type="radio" name="sex" value="male">Male<br>
+<input type="radio" name="sex" value="female">Female
+</form>
+
+<form>
+<input type="checkbox" name="vehicle" value="Bike">I have a bike<br>
+<input type="checkbox" name="vehicle" value="Car">I have a car 
+</form>
+
+<form action="">
+<input type="button" value="Hello world!">
+</form>
+
+<textarea rows="10" cols="30">
+我是一个文本框。
+</textarea>
+
+<form action="">
+<select name="cars">
+<option value="volvo"selected >Volvo</option>
+<option value="saab">Saab</option>
+<option value="fiat">Fiat</option>
+<option value="audi">Audi</option>
+<option value="benz">Benz</option>
+</select>
+</form>
+
+<h3>发送邮件到 someone@example.com:</h3>
+
+<form action="MAILTO:someone@example.com" method="post" enctype="text/plain">
+Name:<br>
+<input type="text" name="name" value="your name"><br>
+E-mail:<br>
+<input type="text" name="mail" value="your email"><br>
+Comment:<br>
+<input type="text" name="comment" value="your comment" size="50"><br><br>
+<input type="submit" value="发送">
+<input type="reset" value="重置">
+</form>
+
+<h3>Iframe - nested webpage</h3>
+<iframe src="text.html" width="400" height="400" name="iframe_a"></iframe>
+<p><a href="table_div.html" target="iframe_a">table_div.html</a></p>
+
+<p>一些旧的浏览器不支持 iframe。</p>
+<p>如果浏览器不支持 iframes 则不会显示。</p>
+<br />
+<form action="demo_form.php" method="post/get">
+<input type="text" name="email" size="40" maxlength="50"> email
+<input type="password"> password
+<input type="checkbox" checked="checked"> check
+<input type="radio" checked="checked"> radio
+<input type="submit" value="Send">
+<input type="reset">
+<input type="hidden">
+<select>
+<option>苹果</option>
+<option selected="selected">香蕉</option>
+<option>樱桃</option>
+</select>
+<textarea name="comment" rows="2" cols="20"></textarea>
+ 
+</form>
+
+</body>
+</html>
